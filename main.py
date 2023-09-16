@@ -187,12 +187,7 @@ def main_func():
     global elements2
     global elements3
 
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    options.add_argument("--disable-blink-features")
-    options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
+    print("시작")
     
     driver = webdriver.Chrome()
     driver.implicitly_wait(10)
