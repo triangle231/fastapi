@@ -16,7 +16,7 @@ from io import BytesIO
 name = ""
 
 id = "painto"
-password = "vpdlsxh"
+password = "vpdlsxh123"
 
 driver = ""
 element = ""
