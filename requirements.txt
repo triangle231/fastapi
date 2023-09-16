@@ -28,5 +28,5 @@ uvicorn==0.17.6
 uvloop==0.16.0
 watchgod==0.8.2
 websockets==10.3
-selenium==3.141.*
+selenium==4.11.2
 Pillow==8.*
