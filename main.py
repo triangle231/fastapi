@@ -7,10 +7,10 @@ import random
 
 app = FastAPI()
 
-# CORS 설정을 추가합니다.
 app.add_middleware(
     CORSMiddleware,
-    allow_methods=["*"],
+    allow_origins=["https://port-0-fastapi-4fju66f2clmmw02om.sel5.cloudtype.app/"],  # 실제 웹 페이지의 도메인으로 변경해야 합니다.
+    allow_methods=["POST"],  # POST 요청만 허용합니다.
     allow_headers=["*"],
 )
 
