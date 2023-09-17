@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import requests
@@ -10,7 +10,7 @@ app = FastAPI()
 # CORS 설정을 추가합니다.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # 이 부분을 실제 도메인으로 수정하는 것이 안전합니다.
+    allow_origins=["https://port-0-fastapi-4fju66f2clmmw02om.sel5.cloudtype.app/"],  # 실제 웹 페이지의 도메인으로 변경해야 합니다.
     allow_methods=["*"],
     allow_headers=["*"],
 )
