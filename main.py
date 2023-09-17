@@ -1,10 +1,19 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import requests
 import json
 import random
 
 app = FastAPI()
+
+# CORS 설정을 추가합니다.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 이 부분을 실제 도메인으로 수정하는 것이 안전합니다.
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 class UserInput(BaseModel):
     system: str
